@@ -1,1 +1,2 @@
-/.env
+#ignoring env file
+.env
