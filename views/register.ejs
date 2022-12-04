@@ -1,0 +1,35 @@
+<%- include('partials/header'); %>
+
+<div class="container">
+    <% if(message) {%>
+    <div class="alert alert-primary" role="alert">
+        <%=message%>
+    </div>
+    <%}%>
+    <form action="/register" method="post" class="p-3">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Cnf Password</label>
+            <input name="cpassword" type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+
+<%- include('partials/footer'); %> 
